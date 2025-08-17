@@ -1,0 +1,76 @@
+{
+  "name": "bybit-volatility-scanner",
+  "version": "1.0.0",
+  "description": "24/7 Bybit volatility scanner with real-time signal detection, WebSocket updates, multi-timeframe analysis, and web dashboard",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "prod": "NODE_ENV=production node server.js",
+    "monitor": "node --expose-gc server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "node-fetch": "^2.7.0",
+    "socket.io": "^4.7.5"
+  },
+  "keywords": [
+    "bybit",
+    "volatility",
+    "scanner",
+    "trading",
+    "signals",
+    "cryptocurrency",
+    "websocket",
+    "real-time",
+    "24/7",
+    "dashboard",
+    "hot-now",
+    "rising",
+    "cooling-off",
+    "multi-timeframe",
+    "1m",
+    "3m",
+    "5m",
+    "15m",
+    "statistical-analysis",
+    "z-score",
+    "slope-detection"
+  ],
+  "engines": {
+    "node": "18.x",
+    "npm": ">=9.0.0"
+  },
+  "author": "",
+  "license": "MIT",
+  "private": true,
+  "homepage": "http://localhost:3000",
+  "bugs": {
+    "url": "https://github.com/your-username/bybit-volatility-scanner/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/bybit-volatility-scanner.git"
+  },
+  "config": {
+    "environmentVariables": {
+      "NODE_ENV": "Environment mode (production/development)",
+      "PORT": "Server port (default: 3000)",
+      "SCAN_INTERVAL": "Scan timing - runs at 3 seconds past each minute",
+      "HISTORY_LIMIT": "Number of scan results to keep in history (default: 100)",
+      "BATCH_SIZE": "Number of symbols to process per batch (default: 120)",
+      "BATCH_DELAY_MS": "Delay between batches in milliseconds (default: 10)"
+    },
+    "features": {
+      "realTimeScanning": "Scans every minute at exactly 3 seconds past",
+      "multiTimeframeAnalysis": "Analyzes 1m, 3m, 5m, and 15m candles",
+      "signalDetection": "Hot Now (highest z-score), Rising (positive slope), Cooling Off (big drops)",
+      "webSocketUpdates": "Real-time updates via Socket.IO",
+      "scanHistory": "Keeps last 100 scan results with timestamps",
+      "dailyRestart": "Automatic server restart at 00:00:03 for stability",
+      "memoryOptimized": "Prevents memory leaks with proper cleanup",
+      "utcPlus2Timezone": "Displays times in UTC+2 timezone",
+      "tradingLinks": "Direct links to GoodCrypto trading pages"
+    }
+  }
+}
